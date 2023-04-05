@@ -40,12 +40,12 @@ INSTALLED_APPS = [
 
     'django.contrib.sites',
     'django.contrib.flatpages',
-    
+
     'news3',
     'django_filters',
     'sign',
     'protect',
-    
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -160,4 +160,4 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-ACCOUNT_FORMS = {'signup': 'sign.models.BasicSignupForm'}
+ACCOUNT_FORMS = {'sign': 'sign.models.BasicSignupForm'}

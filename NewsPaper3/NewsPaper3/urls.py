@@ -15,13 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from sign.views import upgrade_me
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pages/', include('django.contrib.flatpages.urls')),
     path('news/', include('news3.urls')),
     path('', include('protect.urls')),
-    path('sign/', include('sign.urls')),
-    path('accounts/', include('allauth.urls'))
+    # path('sign/', include('sign.urls')),
+    path('sign/', include('allauth.urls')),
+    path('sign/upgrade/', upgrade_me, name='upgrade')
+
 ]
 
